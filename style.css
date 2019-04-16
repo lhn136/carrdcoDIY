@@ -1,3 +1,7 @@
+.main{
+    display: flex;
+}
+
 .icon a{
 /*     diisplay:inline-block; */
     border: 2px solid rgba(255,255,255,.35);
@@ -63,6 +67,7 @@ html, body{
     background-image: linear-gradient(0deg,#FFBCAD,#8576DB);
     border-radius: 15px;
     box-shadow: 20px 40px 50px 20px #1717175a;
+    display: flex;
     /* box-shadow: 1.467rem 2.759rem 4.125rem 0rem rgba(0,0,0,0.451); */
 }
 /* 
@@ -71,12 +76,14 @@ html, body{
 } */
 
 #column01{
-    float: left;
-    width: 35%;
+    flex-grow:1;
+    order:1;
+    width: 30%;
     margin: 13% 0% 13% 12%;
 }
 #column02{
-    float: right;
+    flex:2;
+    order:2;
     /* width: 2%; */
     margin: 13% 12% 13% 0%;
 }
@@ -162,3 +169,35 @@ ul#icons {
     height:100px;
     
 } */
+
+#column01{
+    border: 1px #ccc solid;
+}
+#column02{
+    border: 1px #ccc solid;
+}
+
+@media all and (max-width: 768px) {
+    body{
+        color:red;
+    }
+    #card{
+        width: 100%;
+        
+        height: auto;
+        display: table;
+        align-items: center;
+    }
+    .main{
+        width: 100%;
+        height: auto;
+    }
+    div#column01{
+        /* float: none; */
+        display: table-footer-group;
+    }
+    div#column02{
+        /* float: none; */
+        display: table-header-group;
+    }
+ }
