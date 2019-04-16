@@ -143,13 +143,18 @@ ol,ul{
 */
 
 ul#icons {
-	min-width: 696px;
+    width: 80%;
 	list-style: none;
 	padding-top: 20px;
 	/*! border: 5px white; */
+	display: flex;
+    flex: 1 1;
+	flex-direction: row;
+    justify-content: 
 	}
 	ul#icons li {
-        display: inline;
+        
+        flex: 1 1 auto;
         width: 90px;
         border: 5px white;
         border-radius: 50px;
@@ -177,27 +182,46 @@ ul#icons {
     border: 1px #ccc solid;
 }
 
-@media all and (max-width: 768px) {
-    body{
+@media all and (max-width: 700px) {
+/*     body{
         color:red;
     }
     #card{
         width: 100%;
         
         height: auto;
-        display: table;
         align-items: center;
     }
     .main{
         width: 100%;
         height: auto;
-    }
+    }*/
     div#column01{
-        /* float: none; */
-        display: table-footer-group;
+        flex-direction: column;
+        margin: 0 auto;
+        flex:2;
+        order:2;
+        width: 50%;
+        text-align: center;
     }
     div#column02{
-        /* float: none; */
-        display: table-header-group;
+        margin: 8% auto 0 auto;
+        flex: 1;
+        width: 200px;
+        order: 1;
+    }
+    #card{
+        display: flex;
+        width: 100%;
+        height: 40rem;
+        padding: 0 auto;
+        flex-direction: column;
+        
+     
+    }
+    .main{
+        display:flex;
+        width: 90%;
+        
     }
  }
